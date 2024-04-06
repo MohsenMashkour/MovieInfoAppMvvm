@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MovieInfoAppMvvmTheme {
                 // A surface container using the 'background' color from the theme
-                WindowCompat.setDecorFitsSystemWindows(window,false)
+                WindowCompat.setDecorFitsSystemWindows(window, false)
                 window.setFlags(
                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
@@ -50,11 +50,13 @@ class MainActivity : ComponentActivity() {
 
                     val movieViewModel = viewModel<MovieViewModel>()
                     val state = movieViewModel.state
-Box(modifier = Modifier
-    .fillMaxSize()
-    .background(linearGradientBrush)){
-    Navigation()
-}
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(linearGradientBrush)
+                    ) {
+                        Navigation()
+                    }
 
 
                 }
